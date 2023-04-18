@@ -19,7 +19,7 @@ class RetrofitHelper {
 
         fun getInstance(): Retrofit {
             return Retrofit.Builder()
-                .baseUrl("http://vasundharaapps.com/artwork_apps/api/AdvertiseNewApplications/17")
+                .baseUrl("https://vasundharaapps.com/artwork_apps/api/AdvertiseNewApplications/17/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build())
                 .build()

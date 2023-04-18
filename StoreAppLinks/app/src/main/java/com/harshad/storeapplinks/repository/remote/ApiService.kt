@@ -5,7 +5,7 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("/com.hd.camera.apps.high.quality")
+    @GET("com.hd.camera.apps.high.quality")
     suspend fun getSubCategoryApps(): AppResponse
 
 }
