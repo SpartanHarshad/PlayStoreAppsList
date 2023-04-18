@@ -58,12 +58,13 @@ class StoreAppsAdapter(
         private fun setRatingStar(star: String?) {
             if (star.isNullOrEmpty()) {
                 val str = star?.toInt() ?: 0
-                var view:View
+                var view: View
                 val layoutInflater = LayoutInflater.from(ctx)
                 for (i in 0 until str) {
-                    view = layoutInflater.inflate(R.layout.layout_star,itemViewLayout.llRatingStars,false)
+                    view = layoutInflater.inflate(R.layout.layout_star, null)
                     val imgView: ImageView = view.findViewById(R.id.img_full_star)
-                    itemViewLayout.llRatingStars.addView(imgView)
+                    val viewGroup: ViewGroup = itemViewLayout.llRatingStars
+                        viewGroup.addView(imgView)
                 }
             }
         }
